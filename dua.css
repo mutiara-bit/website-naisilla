@@ -1,0 +1,361 @@
+
+/* PENGATURAN DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --purple: #7956b3;
+    --dark-purple: #34234e;
+    --light-purple: #f4f0fc;
+    --text: #4e4858;
+    --white: #ffffff;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.8;
+    color: var(--text);
+    background: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* NAVIGASI */
+header {
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 2px 12px rgba(50, 30, 80, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: var(--purple);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: var(--dark-purple);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-links a:hover,
+.card a:hover {
+    color: #ad83e8;
+}
+
+/* BERANDA */
+.hero {
+    min-height: 540px;
+    padding: 75px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    background: linear-gradient(135deg, #f5f0ff, #ffffff);
+}
+
+.hero-text {
+    max-width: 470px;
+}
+
+.subtitle {
+    color: var(--purple);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 5vw, 56px);
+    line-height: 1.15;
+    color: var(--dark-purple);
+    margin-bottom: 22px;
+}
+
+.hero-text > p:not(.subtitle) {
+    margin-bottom: 28px;
+}
+
+.button {
+    display: inline-block;
+    background: var(--purple);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: var(--dark-purple);
+    transform: translateY(-2px);
+}
+
+.profile {
+    width: 280px;
+    height: 340px;
+    flex-shrink: 0;
+    padding: 10px;
+    border-radius: 25px;
+    background: white;
+    box-shadow: 0 12px 35px rgba(70, 40, 110, 0.12);
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+/* BAGIAN KONTEN */
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 75px 24px;
+    scroll-margin-top: 80px;
+}
+
+.section h2 {
+    color: var(--dark-purple);
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.about > p:not(.subtitle) {
+    max-width: 850px;
+    margin-bottom: 15px;
+}
+
+.info-card {
+    margin-top: 28px;
+    padding: 25px;
+    background: var(--light-purple);
+    border-radius: 12px;
+}
+
+.info-card h3 {
+    color: var(--dark-purple);
+    margin-bottom: 10px;
+}
+
+.section-desc {
+    margin-bottom: 28px;
+}
+
+/* KARTU MATERI */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #eee7f7;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 6px 22px rgba(50, 30, 80, 0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(50, 30, 80, 0.10);
+}
+
+.card-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    color: var(--dark-purple);
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.card a,
+.text-link {
+    color: var(--purple);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* MATERI DETAIL */
+.detail {
+    background: var(--light-purple);
+    border-radius: 16px;
+    margin-bottom: 28px;
+    padding: 38px;
+}
+
+.detail h3 {
+    color: var(--dark-purple);
+    margin: 20px 0 8px;
+}
+
+.detail p,
+.detail ul,
+.detail ol {
+    margin-bottom: 16px;
+}
+
+.detail ul,
+.detail ol {
+    padding-left: 24px;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 8px;
+}
+
+/* TEKNOLOGI */
+.technology {
+    max-width: none;
+    background: #faf8ff;
+    padding-left: max(24px, calc((100% - 1052px) / 2));
+    padding-right: max(24px, calc((100% - 1052px) / 2));
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    background: var(--dark-purple);
+    color: white;
+    padding: 35px 20px;
+}
+
+footer h3 {
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.copyright {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #d8cce9;
+}
+
+/* TAMPILAN HP */
+@media (max-width: 760px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 45px 22px;
+        gap: 30px;
+    }
+
+    .profile {
+        width: 220px;
+        height: 270px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 50px 22px;
+    }
+
+    .technology {
+        padding: 50px 22px;
+    }
+
+    .detail {
+        padding: 25px;
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    .section h2 {
+        font-size: 27px;
+    }
+}
+
+/* BAGIAN KONTAK */
+.contact-section {
+    margin: 25px auto;
+    max-width: 550px;
+}
+
+.contact-section h2 {
+    color: #ffffff;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.contact-section p {
+    font-size: 14px;
+    color: #e2d9ef;
+}
+
+/* TOMBOL EMAIL DAN INSTAGRAM */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    display: inline-block;
+    color: white;
+    border: 1px solid #cbb8e8;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: #7956b3;
+    border-color: #7956b3;
+    transform: translateY(-2px);
+}
